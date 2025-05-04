@@ -1,8 +1,6 @@
 
 
-def read_sentence(usrinput):
-    usrinput = usrinput.lower()
-    usrinput = usrinput.split(" ")
+def apply_sentence(usrinput, gamestate):
 
     for word in usrinput:
         match word:
@@ -10,3 +8,5 @@ def read_sentence(usrinput):
                 print("rot")
             case "+":
                 print("+")
+            case "q" | "quit" | "exit":
+                exit(0)
